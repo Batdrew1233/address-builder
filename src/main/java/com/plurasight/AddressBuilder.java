@@ -20,14 +20,29 @@ public class AddressBuilder {
         System.out.println("Billing Zip: ");
         String billingZip = myScanner.nextLine();
 
-        //Building String Builder
+        //Get Shipping Address info
+        System.out.println("\nShipping Street: ");
+        String shippingStreet = myScanner.nextLine();
+        System.out.println("Shipping City: ");
+        String shippingCity = myScanner.nextLine();
+        System.out.println("Shipping State: ");
+        String shippingState = myScanner.nextLine();
+        System.out.println("Shipping Zip: ");
+        String shippingZip = myScanner.nextLine();
+
+        //Building String Builder For Billing Address
         StringBuilder billingAddress = new StringBuilder();
         billingAddress.append(billingAddress).append("\n");
         billingAddress.append(billingCity).append(", ");
         billingAddress.append(billingState).append(" ");
         billingAddress.append(billingZip);
 
-        //
+        //Building String Builder For Shipping Address
+        StringBuilder shippingAddress = new StringBuilder();
+        shippingAddress.append(shippingStreet).append("\n");
+        shippingAddress.append(shippingCity).append(", ");
+        shippingAddress.append(shippingState).append(" ");
+        shippingAddress.append(shippingZip);
 
 
 
