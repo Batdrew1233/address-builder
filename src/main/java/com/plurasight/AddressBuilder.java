@@ -11,38 +11,46 @@ public class AddressBuilder {
         String fullName = myScanner.nextLine();
 
         //Get billing address info
-        System.out.println("Billing Street: ");
+        System.out.print("Billing Street: ");
         String billingStreet = myScanner.nextLine();
-        System.out.println("Billing City: ");
+        System.out.print("Billing City: ");
         String billingCity = myScanner.nextLine();
-        System.out.println("Billing State: ");
+        System.out.print("Billing State: ");
         String billingState = myScanner.nextLine();
-        System.out.println("Billing Zip: ");
+        System.out.print("Billing Zip: ");
         String billingZip = myScanner.nextLine();
 
         //Get Shipping Address info
-        System.out.println("\nShipping Street: ");
+        System.out.print("\nShipping Street: ");
         String shippingStreet = myScanner.nextLine();
-        System.out.println("Shipping City: ");
+        System.out.print("Shipping City: ");
         String shippingCity = myScanner.nextLine();
-        System.out.println("Shipping State: ");
+        System.out.print("Shipping State: ");
         String shippingState = myScanner.nextLine();
-        System.out.println("Shipping Zip: ");
+        System.out.print("Shipping Zip: ");
         String shippingZip = myScanner.nextLine();
 
         //Building String Builder For Billing Address
         StringBuilder billingAddress = new StringBuilder();
-        billingAddress.append(billingAddress).append("\n");
+        billingAddress.append("\nBilling Address:\n");
+        billingAddress.append(billingStreet).append("\n");
         billingAddress.append(billingCity).append(", ");
         billingAddress.append(billingState).append(" ");
-        billingAddress.append(billingZip);
+        billingAddress.append(billingZip).append("\n");
+        String finalBillingAddress = billingAddress.toString();
 
         //Building String Builder For Shipping Address
         StringBuilder shippingAddress = new StringBuilder();
+        shippingAddress.append("\nShipping Address:\n");
         shippingAddress.append(shippingStreet).append("\n");
         shippingAddress.append(shippingCity).append(", ");
         shippingAddress.append(shippingState).append(" ");
         shippingAddress.append(shippingZip);
+        String finalShippingAddress = shippingAddress.toString();
+
+        //Print finished product
+        System.out.println("\n====================================");
+        System.out.println("\n" + fullName + "\n" + finalBillingAddress + finalShippingAddress);
 
 
 
